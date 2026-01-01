@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Future 🔮</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background:#0f0f0f;
+      color:#00ffcc;
+      font-family:Arial;
+      text-align:center;
+      padding-top:80px;
+    }
+    button {
+      padding:12px 25px;
+      font-size:18px;
+      border-radius:12px;
+      border:none;
+      background:#00ffcc;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🔮 Your Future</h1>
+<p id="prediction">Clique pour voir ton avenir...</p>
+<button onclick="predict()">Prédire</button>
+
+<script>
+const predictions = [
+  "Tu vas créer un projet qui va surprendre tout le monde.",
+  "Une idée oubliée va devenir sérieuse.",
+  "Ton futur commence aujourd’hui.",
+  "Un truc random va tout changer.",
+  "Tu vas dépasser tes propres limites."
+];
+
+function predict() {
+  const i = Math.floor(Math.random() * predictions.length);
+  document.getElementById("prediction").innerText = predictions[i];
+}
+</script>
+
+</body>
+</html>
